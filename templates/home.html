@@ -5,6 +5,12 @@
 {%block title%} Home - Weather App {% endblock title %}
 {%block content%}
 
-<h2>Weather App</h2>    
+<h2>Weather App. Find the Weather condition</h2>    
+<form action="post">
+    {% csrf_token %}
+    <label for="location">Enter the location for weather: </label>
+    <input type="text" name="location" id="location" placeholder="Enter the location">
+    <button type="submit">Search</button>
+</form>
 
 {% endblock content %}
